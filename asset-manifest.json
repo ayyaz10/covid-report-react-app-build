@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/covid-report-react-app-build/static/css/main.f13bf765.css",
-    "main.js": "/covid-report-react-app-build/static/js/main.fa0eb67b.js",
+    "main.js": "/covid-report-react-app-build/static/js/main.df7d55ec.js",
     "static/js/787.7c14571c.chunk.js": "/covid-report-react-app-build/static/js/787.7c14571c.chunk.js",
     "static/media/bubble-gum-two-purple-gears.gif": "/covid-report-react-app-build/static/media/bubble-gum-two-purple-gears.f6bfa78c5634dd9ec203.gif",
     "index.html": "/covid-report-react-app-build/index.html",
     "main.f13bf765.css.map": "/covid-report-react-app-build/static/css/main.f13bf765.css.map",
-    "main.fa0eb67b.js.map": "/covid-report-react-app-build/static/js/main.fa0eb67b.js.map",
+    "main.df7d55ec.js.map": "/covid-report-react-app-build/static/js/main.df7d55ec.js.map",
     "787.7c14571c.chunk.js.map": "/covid-report-react-app-build/static/js/787.7c14571c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f13bf765.css",
-    "static/js/main.fa0eb67b.js"
+    "static/js/main.df7d55ec.js"
   ]
 }
