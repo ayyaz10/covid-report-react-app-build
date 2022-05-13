@@ -46,7 +46,7 @@ const Home = () => {
 
   const handleReceive = async () => {
     const patients = await getData();
-    // console.log(patients);
+    console.log(patients);
 
     setPatients(patients.data.patients);
   };
@@ -61,6 +61,7 @@ const Home = () => {
       return setError('Please fill the form fields.');
     } else {
       const response = await sendData(Patient);
+      console.log(response);
       if (response.data.isSuccess) {
         const resolvePromise = new Promise((resolve, reject) => {
           getData().then((res) => {

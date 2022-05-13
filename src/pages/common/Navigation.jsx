@@ -10,8 +10,11 @@ const Navigation = () => {
         <Nav.Item className='me-3'>
           <Link to='/'>Home</Link>
         </Nav.Item>
-        <Nav.Item>
+        <Nav.Item className='me-3'>
           <Link to='/report'>Reports</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to='/covid-cases'>Covid Cases</Link>
         </Nav.Item>
       </Nav>
     </>

@@ -1,5 +1,8 @@
 import axios from "axios";
-const data_url = "https://covid-19-node-app.herokuapp.com";
+// const data_url = "https://covid-19-node-app.herokuapp.com";
+const data_url = "http://localhost:3333";
+
+
 
 export function getData() {
   return axios.get(data_url);

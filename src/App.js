@@ -2,6 +2,7 @@ import './App.css';
 import Home from './pages/Home/Home';
 // import Posts from './pages/Posts';
 import PatientsReport from './pages/Home/PatientsReport';
+import CovidCases from './pages/CovidStates/CovidCases';
 import Navigation from './pages/common/Navigation';
 import {Routes, Route } from 'react-router-dom';
 
@@ -12,6 +13,7 @@ function App() {
       <div className="col-lg-12 mx-auto p-3 py-md-5 container">
         <Routes>
           <Route path="/" element={<Home />}/>
+          <Route path="/covid-cases" element={<CovidCases />}/>
           <Route path="/report" element={<PatientsReport />}/>
         </Routes>
       </div>
