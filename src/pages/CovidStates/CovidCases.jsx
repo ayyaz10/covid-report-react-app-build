@@ -6,7 +6,7 @@ const CovidCases = () => {
 
   const getdata = Covid.getData;
   getdata().then((res) => {
-    console.log(res);
+    console.log(res.data.response[0]);
   });
 
   return (
