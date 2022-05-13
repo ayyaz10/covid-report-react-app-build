@@ -1,7 +1,13 @@
 import PatientForm from './PatientForm';
 import PatientsList from './PatientsList';
 // import PatientsReport from './PatientsReport';
-import { getData, sendData, updateData, deleteData } from '../../service/http';
+import {
+  PatientApi,
+  getData,
+  sendData,
+  updateData,
+  deleteData,
+} from '../../service/http';
 import { useState, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import RepeatableTableRows from '../common/RepeatAbleTableRows';
@@ -45,7 +51,7 @@ const Home = () => {
   };
 
   const handleReceive = async () => {
-    const patients = await getData();
+    const patients = await PatientApi.getData();
     console.log(patients);
 
     setPatients(patients.data.patients);
@@ -60,11 +66,11 @@ const Home = () => {
     if (handleValidation()) {
       return setError('Please fill the form fields.');
     } else {
-      const response = await sendData(Patient);
+      const response = await PatientApi.sendData(Patient);
       console.log(response);
       if (response.data.isSuccess) {
         const resolvePromise = new Promise((resolve, reject) => {
-          getData().then((res) => {
+          PatientApi.getData().then((res) => {
             if (res.data.isSuccess) {
               resetPatient();
               setTimeout(() => {
@@ -111,7 +117,7 @@ const Home = () => {
         pts[index] = Patient;
         // const response = await /// working
         const resolvePromise = new Promise((resolve, reject) => {
-          updateData(singlePatient.id, Patient).then((res) => {
+          PatientApi.updateData(singlePatient.id, Patient).then((res) => {
             if (res.data.isSuccess) {
               resetPatient();
               setTimeout(() => {
@@ -144,7 +150,7 @@ const Home = () => {
     setPatient(singlePatient);
     setisDisabled(true);
     const resolvePromise = new Promise((resolve, reject) => {
-      deleteData(pid).then((res) => {
+      PatientApi.deleteData(pid).then((res) => {
         if (res.data.isSuccess) {
           resetPatient();
           setTimeout(() => {
