@@ -51,10 +51,18 @@ const Home = () => {
   };
 
   const handleReceive = async () => {
-    const patients = await PatientApi.getData();
-    console.log(patients);
+    try {
+      const patients = await PatientApi.getData();
+      console.log(patients);
 
-    setPatients(patients.data.patients);
+      setPatients(patients.data.patients);
+    } catch (error) {
+      console.log('Something went wrong. Sending request again after 10 sec');
+      setTimeout(() => {
+        console.log('sending requst now');
+        handleReceive();
+      }, 10000);
+    }
   };
 
   const resetPatient = () => {
